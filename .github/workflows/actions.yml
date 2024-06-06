@@ -2,9 +2,9 @@ name: CICD_act
 
 on:
   push:
-    branches: [ develop, master ]
+    branches: [ develop_ali, master ]
   pull_request:
-    branches: [ develop, master ]
+    branches: [ develop_ali, master ]
 
 jobs:
   build:
@@ -30,6 +30,5 @@ jobs:
     - name: Run tests
       run: python manage.py test     
 
-    - name: Collect static files
-      run: python manage.py collectstatic --noinput
+
    
